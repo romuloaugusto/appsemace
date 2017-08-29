@@ -136,20 +136,15 @@ class BalneabilidadeVC: UIViewController, MKMapViewDelegate, UIPopoverPresentati
 
         self.mapView.delegate = self
         self.mapView.showsUserLocation = true
-        
-        
-        //FIX-ME: Tratar quando web service estiver fora do ar.
-        
-        
+
         let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
         let location = CLLocationCoordinate2DMake(self.FORTALEZA_LATITUDE, self.FORTALEZA_LONGITUDE)
         let region = MKCoordinateRegion(center: location, span: span)
         
         fetchLastBoletins { (result: Result) in
             do {
-                print("entrou no fetch")
+
                 if result == Result.Failure {
-                    print("retornou falha")
 
                     self.viewTentarNovamente.isHidden = false
                 }
@@ -174,13 +169,8 @@ class BalneabilidadeVC: UIViewController, MKMapViewDelegate, UIPopoverPresentati
             
                     self.mapView.setRegion(region, animated: true)
                 }
-            
-                print("terminou o fech")
-
             }
-            
         }
-
     }
     
     // handle notification
@@ -242,52 +232,34 @@ class BalneabilidadeVC: UIViewController, MKMapViewDelegate, UIPopoverPresentati
     }
 
     func fetchLastBoletins(complete: @escaping (Result) -> Void) {
-        print("inicio fetch")
         
         guard let url = URL(string: URL_SERVICE_LAST_BOLETINS) else {
             
-            print("erro no servico")
+            //TODO: Return Result.Failure
             return
         
         }
         
-        print("criou url")
-        
         URLSession.shared.dataTask(with: url) { (data, responde, err) -> Void in
-            print("inicio carregar dados")
-            
-//            guard err != nil else {
-//                print("error \(err)")
-//                return complete( Result.Failure )
-//            }
+
             guard let data = data else {
-                print("no data")
                 return complete( Result.Failure )
             }
             
-//            guard let data = data else {
-//                print("erro carregar dados")
-//                return
-//            }
-            
             do {
-                print("inicio serializar")
+
                 guard let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] else { return }
                 
                 self.lastBoletins = LastBoletins(json: json)
-                
-                print("fim serializar")
                 
             } catch let jsonErr {
                 print("Erro ao serializar o json: ", jsonErr)
             }
             
-            print("vai completar")
             complete(Result.Success)
-            print("completou")
             
             }.resume()
-        print("resumou")
+
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -323,6 +295,7 @@ class BalneabilidadeVC: UIViewController, MKMapViewDelegate, UIPopoverPresentati
         
     }
     
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
         if view.annotation is MKUserLocation {
@@ -350,6 +323,7 @@ class BalneabilidadeVC: UIViewController, MKMapViewDelegate, UIPopoverPresentati
         mapView.setCenter((view.annotation?.coordinate)!, animated: true)
     }
     
+    
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         if view.isKind(of: MKAnnotationView.self) {
             for subview in view.subviews {
@@ -357,107 +331,6 @@ class BalneabilidadeVC: UIViewController, MKMapViewDelegate, UIPopoverPresentati
             }
         }
     }
-    
-    //    @IBAction func segmentedControlAction(sender: UISegmentedControl!) {
-    //        switch (sender.selectedSegmentIndex) {
-    //        case 0:
-    //            mapView.mapType = .standard
-    //        case 1:
-    //            mapView.mapType = .satellite
-    //        default:
-    //            mapView.mapType = .hybrid
-    //        }
-    //    }
-    //
-    //
-    //    @IBAction func showMenu(_ sender: UIBarButtonItem) {
-    //
-    //        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-    //        let popoverMenu = storyboard.instantiateViewController(withIdentifier: "BalneabilidadePopover")
-    //        popoverMenu.modalPresentationStyle = .popover
-    //        popoverMenu.preferredContentSize = CGSize(width: 140, height: 100)
-    //
-    //
-    //        popoverMenu.popoverPresentationController?.delegate = self
-    //        popoverMenu.popoverPresentationController!.barButtonItem = sender
-    //
-    //        self.present(popoverMenu, animated: true, completion: nil)
-    //
-    //    }
-    //
-    //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    //        if segue.identifier == "popoverLegenda" {
-    //            let popoverLegenda = segue.destination
-    //
-    //            popoverLegenda.popoverPresentationController?.delegate = self
-    //            popoverLegenda.modalPresentationStyle = .popover
-    //            popoverLegenda.preferredContentSize = CGSize(width: 300, height: 500)
-    //        }
-    //    }
-    //
-    //
-    //
-    // UIPopoverPresentationControllerDelegate method
-    //    func adaptivePresentationStyle(for controller: UIPresentationController, traitCollection: UITraitCollection) -> UIModalPresentationStyle {
-    //
-    //        return UIModalPresentationStyle.none
-    //    }
-    //
-    //    @IBAction func showMenuActivity(_ sender: UIBarButtonItem) {
-    //        let img = UIImage(named: "caution")
-    //
-    //        var images = [UIImage]()
-    //
-    //        images.append(img!)
-    //
-    //        let activity = UIActivityViewController(activityItems: images, applicationActivities: nil)
-    //        activity.modalPresentationStyle = .popover
-    //        activity.popoverPresentationController?.barButtonItem = sender
-    //
-    //        self.present(activity, animated: true, completion: nil)
-    //    }
-    //
-    //    @IBAction func showCustoActionSheet(_ sender: UIBarButtonItem) {
-    //        self.performSegue(withIdentifier: "instrucoesSegue", sender: nil)
-    //
-    //    }
-    //
-    //
-    //    @IBAction func showActionSheet(_ sender: UIBarButtonItem) {
-    //
-    //       let actionSheet = UIAlertController(title: "Escolha", message: nil, preferredStyle: .actionSheet)
-    //
-    //
-    //        let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
-    //            print("Cancel")
-    //        }
-    //
-    //        let legendaActionButton = UIAlertAction(title: "Instruções", style: .default) { action -> Void in
-    //            self.performSegue(withIdentifier: "legendaSegue", sender: nil)
-    //        }
-    //
-    //        let tiposMapa = ["Tipo 1", "Tipo 2", "Tipo 3"]
-    //
-    //        let segment = UISegmentedControl(items: tiposMapa)
-    //
-    //
-    //        let margin:CGFloat = 10.0
-    //        let rect = CGRect(x: margin, y: margin, width: actionSheet.view.bounds.size.width - margin * 4.0, height: 120)
-    //        let customView = UIView(frame: rect)
-    //        customView.addSubview(segment)
-    //
-    //        customView.backgroundColor = .green
-    //
-    //        actionSheet.view.addSubview(segment)
-    //        
-    //        actionSheet.addAction(cancelActionButton)
-    //        actionSheet.addAction(legendaActionButton)
-    //        
-    //        actionSheet.popoverPresentationController?.barButtonItem = sender
-    //        
-    //        self.present(actionSheet, animated: true, completion: nil)
-    //        
-    //    }
     
 }
 
