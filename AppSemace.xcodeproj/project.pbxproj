@@ -24,6 +24,7 @@
 		433A6E371F3565C3003A17BF /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 433A6E331F3565C3003A17BF /* CustomCalloutView.xib */; };
 		433A6E381F3565C3003A17BF /* PontoAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A6E341F3565C3003A17BF /* PontoAnnotation.swift */; };
 		433A6E391F3565C3003A17BF /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A6E351F3565C3003A17BF /* AnnotationView.swift */; };
+		43849F1A1F5792BB00C3ED8A /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43849F191F5792BB00C3ED8A /* Structs.swift */; };
 		43D3656C1F43C02F002F7CA5 /* BalneabilidadeModalMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D3656B1F43C02F002F7CA5 /* BalneabilidadeModalMenuVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		433A6E331F3565C3003A17BF /* CustomCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCalloutView.xib; sourceTree = "<group>"; };
 		433A6E341F3565C3003A17BF /* PontoAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoAnnotation.swift; sourceTree = "<group>"; };
 		433A6E351F3565C3003A17BF /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
+		43849F191F5792BB00C3ED8A /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		43D3656B1F43C02F002F7CA5 /* BalneabilidadeModalMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalneabilidadeModalMenuVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -123,6 +125,7 @@
 				433A6E2C1F3565B4003A17BF /* PontoAnalise.swift */,
 				433A6E2D1F3565B4003A17BF /* Boletim.swift */,
 				433A6E2E1F3565B4003A17BF /* Regiao.swift */,
+				43849F191F5792BB00C3ED8A /* Structs.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				433A6E311F3565B4003A17BF /* Regiao.swift in Sources */,
 				433A6E181F3564AF003A17BF /* BalneabilidadeVC.swift in Sources */,
 				4309CEA21F41404E00289201 /* CustomActionSheet.swift in Sources */,
+				43849F1A1F5792BB00C3ED8A /* Structs.swift in Sources */,
 				43D3656C1F43C02F002F7CA5 /* BalneabilidadeModalMenuVC.swift in Sources */,
 				4309CEA01F41368900289201 /* SwiftDemoAlertController.swift in Sources */,
 			);
