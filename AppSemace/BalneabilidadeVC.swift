@@ -27,7 +27,7 @@ class BalneabilidadeVC: UIViewController, MKMapViewDelegate, UIPopoverPresentati
     
     let FORTALEZA_LATITUDE = -3.7319
     let FORTALEZA_LONGITUDE = -38.5267
-    let URL_SERVICE_LAST_BOLETINS = "http://localhost:8080/SemaceMobileWS/webService/balneabilidade/boletim/lastBoletins?id_fortaleza=1&id_estado=1&id_rmf=1"
+    let URL_SERVICE_LAST_BOLETINS = "http://10.0.1.111:8080/SemaceMobileWS/webService/balneabilidade/boletim/lastBoletins?id_fortaleza=1&id_estado=1&id_rmf=1"
     
     var lastBoletins: LastBoletins!
     
@@ -127,7 +127,12 @@ class BalneabilidadeVC: UIViewController, MKMapViewDelegate, UIPopoverPresentati
         
         local = local.trimmingCharacters(in: .whitespacesAndNewlines)
         
-        let coordenadas = CLLocationCoordinate2DMake(ponto.lat.toDouble()!, ponto.lng.toDouble()!)
+        let latStr = ponto.lat
+        let longStr = ponto.lng
+//        let coordenadas = CLLocationCoordinate2DMake(ponto.lat.toDouble()!, ponto.lng.toDouble()!)
+        let latDouble = (latStr as NSString).doubleValue
+        let longDouble = (longStr as NSString).doubleValue
+        let coordenadas = CLLocationCoordinate2DMake(latDouble, longDouble)
         let annotation = PontoAnnotation(title: titulo, status: ponto.status, local: local, coordinate: coordenadas)
        
         if ponto.status == 0 {
