@@ -27,7 +27,7 @@ class BalneabilidadeVC: UIViewController, MKMapViewDelegate, UIPopoverPresentati
     
     let FORTALEZA_LATITUDE = -3.7319
     let FORTALEZA_LONGITUDE = -38.5267
-    let URL_SERVICE_LAST_BOLETINS = "http://10.0.1.111:8080/SemaceMobileWS/webService/balneabilidade/boletim/lastBoletins?id_fortaleza=1&id_estado=1&id_rmf=1"
+    let URL_SERVICE_LAST_BOLETINS = "http://localhost:8080/SemaceMobileWS/webService/balneabilidade/boletim/lastBoletins?id_fortaleza=1&id_estado=1&id_rmf=1"
     
     var lastBoletins: LastBoletins!
     

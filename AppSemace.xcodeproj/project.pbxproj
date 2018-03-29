@@ -96,13 +96,13 @@
 		433A6E291F35656A003A17BF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				433A6E171F3564AF003A17BF /* BalneabilidadeVC.swift */,
-				433A6E191F3564AF003A17BF /* SobreVC.swift */,
-				4336AD2C1F3BF64D0036E77F /* BalneabilidadePopoverMenuVC.swift */,
-				4309CE9D1F411A6D00289201 /* LegendaVC.swift */,
-				4309CE9F1F41368900289201 /* SwiftDemoAlertController.swift */,
-				4309CEA11F41404E00289201 /* CustomActionSheet.swift */,
 				43D3656B1F43C02F002F7CA5 /* BalneabilidadeModalMenuVC.swift */,
+				4336AD2C1F3BF64D0036E77F /* BalneabilidadePopoverMenuVC.swift */,
+				433A6E171F3564AF003A17BF /* BalneabilidadeVC.swift */,
+				4309CEA11F41404E00289201 /* CustomActionSheet.swift */,
+				4309CE9D1F411A6D00289201 /* LegendaVC.swift */,
+				433A6E191F3564AF003A17BF /* SobreVC.swift */,
+				4309CE9F1F41368900289201 /* SwiftDemoAlertController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -110,11 +110,11 @@
 		433A6E2A1F356576003A17BF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				433A6E1B1F3564AF003A17BF /* Main.storyboard */,
-				433A6E321F3565C3003A17BF /* CustomCalloutView.swift */,
-				433A6E331F3565C3003A17BF /* CustomCalloutView.xib */,
-				433A6E341F3565C3003A17BF /* PontoAnnotation.swift */,
 				433A6E351F3565C3003A17BF /* AnnotationView.swift */,
+				433A6E321F3565C3003A17BF /* CustomCalloutView.swift */,
+				433A6E341F3565C3003A17BF /* PontoAnnotation.swift */,
+				433A6E331F3565C3003A17BF /* CustomCalloutView.xib */,
+				433A6E1B1F3564AF003A17BF /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -122,8 +122,8 @@
 		433A6E2B1F35657E003A17BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				433A6E2C1F3565B4003A17BF /* PontoAnalise.swift */,
 				433A6E2D1F3565B4003A17BF /* Boletim.swift */,
+				433A6E2C1F3565B4003A17BF /* PontoAnalise.swift */,
 				433A6E2E1F3565B4003A17BF /* Regiao.swift */,
 				43849F191F5792BB00C3ED8A /* Structs.swift */,
 			);

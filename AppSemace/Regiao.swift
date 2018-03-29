@@ -11,9 +11,7 @@ import Foundation
 enum Regiao: String {
     
     case FORTALEZA = "Fortaleza"
-    
-    case RMF = "Região Metropolitana"
-    
+    case RMF = "Região Metropolitana"    
     case ESTADO = "Estado"
     
 }
