@@ -8,7 +8,7 @@
 
 import UIKit
 import MapKit
-
+import Contacts
 
 class PontoAnnotation : NSObject, MKAnnotation {
     var coordinate: CLLocationCoordinate2D
@@ -24,7 +24,15 @@ class PontoAnnotation : NSObject, MKAnnotation {
         self.local = local
         self.status = status
         self.coordinate = coordinate
-        self.subtitle = nil
-        
+        self.subtitle = "\(local) Situação: Propria"
+
+    }
+    
+    func mapItem() -> MKMapItem {
+        let addressDict = [CNPostalAddressStreetKey: local!]
+        let placemark = MKPlacemark(coordinate: coordinate, addressDictionary: addressDict)
+        let mapItem = MKMapItem(placemark: placemark)
+        mapItem.name = title
+        return mapItem
     }
 }
