@@ -16,6 +16,8 @@ class BalneabilidadeVC: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var viewTentarNovamente: UIView!
     
+    var lastBoletins: LastBoletins!
+    
     let COR_IMPROPRIA = UIColor(red: 255/255, green: 53/255, blue: 52/255, alpha: 1) //"FF3534"
     let COR_PROPRIA = UIColor(red: 0/255, green: 150/255, blue: 136/255, alpha: 1) //"009688"
     let SITUACAO_PROPRIA_DESCRICAO = "Própria para banho"
@@ -30,16 +32,14 @@ class BalneabilidadeVC: UIViewController {
         return button
     }
     
-    var lastBoletins: LastBoletins!
-    
     func showInfoScreen() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let menuViewController = storyboard.instantiateViewController(withIdentifier: "menuVC") as! MenuVC
         self.present(menuViewController, animated: true, completion: nil)
     }
     
-    func setupInitialLocation() {
-        
+    @IBAction func onClickTryAgain(_ sender: UIButton) {
+        self.viewDidLoad()
     }
     
     override func viewDidLoad() {
@@ -144,10 +144,6 @@ class BalneabilidadeVC: UIViewController {
         
         self.mapView.addAnnotation(annotation)
     }
-    
-    @IBAction func onClickTryAgain(_ sender: UIButton) {
-        self.viewDidLoad()
-    }
 
     func fetchLastBoletins(complete: @escaping (Result) -> Void) {
         
@@ -236,6 +232,14 @@ extension BalneabilidadeVC: MKMapViewDelegate {
             alertController.addAction(okButton)
             present(alertController, animated: true, completion: nil)
         }
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        let ponto = view.annotation as! PontoAnnotation
+            let span = MKCoordinateSpan(latitudeDelta: 0.012, longitudeDelta: 0.012)
+            let location = CLLocationCoordinate2DMake(ponto.coordinate.latitude, ponto.coordinate.longitude)
+            let region = MKCoordinateRegion(center: location, span: span)
+            mapView.setRegion(region, animated: true)
     }
     
 }
