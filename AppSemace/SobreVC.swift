@@ -14,15 +14,14 @@ class SobreVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let date = Date()
+        setupCopyright()
+    }
+    
+    func setupCopyright() {
         let calendar = Calendar.current
-        
-        let currentYear = calendar.component(.year, from: date)
+        let currentYear = calendar.component(.year, from: Date())
         self.copyright.text = "Ⓒ \(currentYear) SEMACE"
     }
-
-
 
 }
 

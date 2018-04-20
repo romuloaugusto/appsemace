@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4309CE9E1F411A6D00289201 /* LegendaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4309CE9D1F411A6D00289201 /* LegendaVC.swift */; };
-		4309CEA01F41368900289201 /* SwiftDemoAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4309CE9F1F41368900289201 /* SwiftDemoAlertController.swift */; };
-		4309CEA21F41404E00289201 /* CustomActionSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4309CEA11F41404E00289201 /* CustomActionSheet.swift */; };
-		4336AD2D1F3BF64D0036E77F /* BalneabilidadePopoverMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4336AD2C1F3BF64D0036E77F /* BalneabilidadePopoverMenuVC.swift */; };
 		433A6E161F3564AF003A17BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A6E151F3564AF003A17BF /* AppDelegate.swift */; };
 		433A6E181F3564AF003A17BF /* BalneabilidadeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A6E171F3564AF003A17BF /* BalneabilidadeVC.swift */; };
 		433A6E1A1F3564AF003A17BF /* SobreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A6E191F3564AF003A17BF /* SobreVC.swift */; };
@@ -20,19 +17,13 @@
 		433A6E2F1F3565B4003A17BF /* PontoAnalise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A6E2C1F3565B4003A17BF /* PontoAnalise.swift */; };
 		433A6E301F3565B4003A17BF /* Boletim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A6E2D1F3565B4003A17BF /* Boletim.swift */; };
 		433A6E311F3565B4003A17BF /* Regiao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A6E2E1F3565B4003A17BF /* Regiao.swift */; };
-		433A6E361F3565C3003A17BF /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A6E321F3565C3003A17BF /* CustomCalloutView.swift */; };
-		433A6E371F3565C3003A17BF /* CustomCalloutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 433A6E331F3565C3003A17BF /* CustomCalloutView.xib */; };
 		433A6E381F3565C3003A17BF /* PontoAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A6E341F3565C3003A17BF /* PontoAnnotation.swift */; };
-		433A6E391F3565C3003A17BF /* AnnotationView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 433A6E351F3565C3003A17BF /* AnnotationView2.swift */; };
 		43849F1A1F5792BB00C3ED8A /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43849F191F5792BB00C3ED8A /* Structs.swift */; };
-		43D3656C1F43C02F002F7CA5 /* BalneabilidadeModalMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D3656B1F43C02F002F7CA5 /* BalneabilidadeModalMenuVC.swift */; };
+		43D3656C1F43C02F002F7CA5 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43D3656B1F43C02F002F7CA5 /* MenuVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4309CE9D1F411A6D00289201 /* LegendaVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LegendaVC.swift; sourceTree = "<group>"; };
-		4309CE9F1F41368900289201 /* SwiftDemoAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftDemoAlertController.swift; sourceTree = "<group>"; };
-		4309CEA11F41404E00289201 /* CustomActionSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomActionSheet.swift; sourceTree = "<group>"; };
-		4336AD2C1F3BF64D0036E77F /* BalneabilidadePopoverMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalneabilidadePopoverMenuVC.swift; sourceTree = "<group>"; };
 		433A6E121F3564AF003A17BF /* AppSemace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppSemace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		433A6E151F3564AF003A17BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		433A6E171F3564AF003A17BF /* BalneabilidadeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalneabilidadeVC.swift; sourceTree = "<group>"; };
@@ -44,12 +35,9 @@
 		433A6E2C1F3565B4003A17BF /* PontoAnalise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoAnalise.swift; sourceTree = "<group>"; };
 		433A6E2D1F3565B4003A17BF /* Boletim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Boletim.swift; sourceTree = "<group>"; };
 		433A6E2E1F3565B4003A17BF /* Regiao.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Regiao.swift; sourceTree = "<group>"; };
-		433A6E321F3565C3003A17BF /* CustomCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
-		433A6E331F3565C3003A17BF /* CustomCalloutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCalloutView.xib; sourceTree = "<group>"; };
 		433A6E341F3565C3003A17BF /* PontoAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PontoAnnotation.swift; sourceTree = "<group>"; };
-		433A6E351F3565C3003A17BF /* AnnotationView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView2.swift; sourceTree = "<group>"; };
 		43849F191F5792BB00C3ED8A /* Structs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
-		43D3656B1F43C02F002F7CA5 /* BalneabilidadeModalMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalneabilidadeModalMenuVC.swift; sourceTree = "<group>"; };
+		43D3656B1F43C02F002F7CA5 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,12 +70,11 @@
 		433A6E141F3564AF003A17BF /* AppSemace */ = {
 			isa = PBXGroup;
 			children = (
-				433A6E2B1F35657E003A17BF /* Model */,
-				433A6E2A1F356576003A17BF /* View */,
-				433A6E291F35656A003A17BF /* Controller */,
+				43672478208967A700C4E986 /* Balneabilidade */,
 				433A6E151F3564AF003A17BF /* AppDelegate.swift */,
-				433A6E1E1F3564AF003A17BF /* Assets.xcassets */,
+				433A6E1B1F3564AF003A17BF /* Main.storyboard */,
 				433A6E201F3564AF003A17BF /* LaunchScreen.storyboard */,
+				433A6E1E1F3564AF003A17BF /* Assets.xcassets */,
 				433A6E231F3564AF003A17BF /* Info.plist */,
 			);
 			path = AppSemace;
@@ -96,13 +83,10 @@
 		433A6E291F35656A003A17BF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				43D3656B1F43C02F002F7CA5 /* BalneabilidadeModalMenuVC.swift */,
-				4336AD2C1F3BF64D0036E77F /* BalneabilidadePopoverMenuVC.swift */,
+				43D3656B1F43C02F002F7CA5 /* MenuVC.swift */,
 				433A6E171F3564AF003A17BF /* BalneabilidadeVC.swift */,
-				4309CEA11F41404E00289201 /* CustomActionSheet.swift */,
 				4309CE9D1F411A6D00289201 /* LegendaVC.swift */,
 				433A6E191F3564AF003A17BF /* SobreVC.swift */,
-				4309CE9F1F41368900289201 /* SwiftDemoAlertController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -110,11 +94,7 @@
 		433A6E2A1F356576003A17BF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				433A6E351F3565C3003A17BF /* AnnotationView2.swift */,
-				433A6E321F3565C3003A17BF /* CustomCalloutView.swift */,
 				433A6E341F3565C3003A17BF /* PontoAnnotation.swift */,
-				433A6E331F3565C3003A17BF /* CustomCalloutView.xib */,
-				433A6E1B1F3564AF003A17BF /* Main.storyboard */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -128,6 +108,16 @@
 				43849F191F5792BB00C3ED8A /* Structs.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		43672478208967A700C4E986 /* Balneabilidade */ = {
+			isa = PBXGroup;
+			children = (
+				433A6E2B1F35657E003A17BF /* Model */,
+				433A6E2A1F356576003A17BF /* View */,
+				433A6E291F35656A003A17BF /* Controller */,
+			);
+			name = Balneabilidade;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,7 +180,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				433A6E371F3565C3003A17BF /* CustomCalloutView.xib in Resources */,
 				433A6E221F3564AF003A17BF /* LaunchScreen.storyboard in Resources */,
 				433A6E1F1F3564AF003A17BF /* Assets.xcassets in Resources */,
 				433A6E1D1F3564AF003A17BF /* Main.storyboard in Resources */,
@@ -205,20 +194,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				433A6E1A1F3564AF003A17BF /* SobreVC.swift in Sources */,
-				433A6E391F3565C3003A17BF /* AnnotationView2.swift in Sources */,
-				4336AD2D1F3BF64D0036E77F /* BalneabilidadePopoverMenuVC.swift in Sources */,
 				433A6E301F3565B4003A17BF /* Boletim.swift in Sources */,
 				4309CE9E1F411A6D00289201 /* LegendaVC.swift in Sources */,
-				433A6E361F3565C3003A17BF /* CustomCalloutView.swift in Sources */,
 				433A6E381F3565C3003A17BF /* PontoAnnotation.swift in Sources */,
 				433A6E161F3564AF003A17BF /* AppDelegate.swift in Sources */,
 				433A6E2F1F3565B4003A17BF /* PontoAnalise.swift in Sources */,
 				433A6E311F3565B4003A17BF /* Regiao.swift in Sources */,
 				433A6E181F3564AF003A17BF /* BalneabilidadeVC.swift in Sources */,
-				4309CEA21F41404E00289201 /* CustomActionSheet.swift in Sources */,
 				43849F1A1F5792BB00C3ED8A /* Structs.swift in Sources */,
-				43D3656C1F43C02F002F7CA5 /* BalneabilidadeModalMenuVC.swift in Sources */,
-				4309CEA01F41368900289201 /* SwiftDemoAlertController.swift in Sources */,
+				43D3656C1F43C02F002F7CA5 /* MenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
